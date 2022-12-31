@@ -1,0 +1,11 @@
+.Projects {
+    width: 98%;
+    height: 50rem;
+    border: 3px solid red;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

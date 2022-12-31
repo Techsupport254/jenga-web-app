@@ -1,0 +1,74 @@
+.About {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(87, 85, 85);
+    padding: 1rem;
+    margin: 1rem;
+}
+.History{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1rem;
+    background: black;
+    border: 3px solid green;
+}
+
+.History span{
+    color: goldenrod;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    
+}
+
+.History p{
+    color: black;
+}
+.About .heading {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: goldenrod;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid goldenrod;
+}
+
+.AboutContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 200px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 1rem;
+    background: rgb(33, 31, 31);
+}
+
+.AboutContent h5 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: goldenrod;
+    text-align: center;
+}
+
+.About p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgb(244, 238, 238);
+    text-align: center;
+    margin-top: 1rem;
+    padding: .5rem;
+
+}

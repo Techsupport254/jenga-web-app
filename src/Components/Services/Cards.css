@@ -1,0 +1,8 @@
+.Cards{
+    /* background image */
+    background-image: url(../../Assets/IMGS/gallery1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(.5px);
+}

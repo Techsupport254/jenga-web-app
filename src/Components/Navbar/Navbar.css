@@ -1,11 +1,12 @@
 .Navbar {
-    background-color: rgb(27, 27, 31);
+    background-color: var(--bg-color);
     width: 100%;
     height: 7rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    top: 0;
     position: fixed;
     z-index: 1000;
 }
@@ -20,8 +21,6 @@
 }
 
 .NavbarLogo {
-    color: #fff;
-    text-decoration: none;
     font-size: 2rem;
     font-weight: 700;
     display: flex;
@@ -37,11 +36,11 @@
     height: 4rem;
     border-radius: 50%;
     padding: .5rem;
-    border: 1px solid goldenrod;
+    border: 2px solid var(--accent-color);
 }
 
 .NavbarLogo span {
-    color: goldenrod;
+    color: var(--accent-color);
 }
 
 .NavbarMenu {
@@ -54,7 +53,7 @@
     display: flex;
     align-items: center;
     height: 3rem;
-    width: 20rem;
+    width: 30%;
     border-radius: 5px;
     background-color: #fff;
     padding: 0 1rem;
@@ -69,12 +68,10 @@
     padding: 0 1rem;
 }
 
-
-
 .SearchBar button {
     border: none;
     outline: none;
-    background-color: rgb(72, 72, 184);
+    background-color: var(--bg-color-clear);
     cursor: pointer;
     font-size: 1.2rem;
     color: white;
@@ -123,7 +120,32 @@
 }
 
 /* media queries */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 1400px) {
+    .Navbar {
+        height: 7rem;
+    }
+
+    .MenuIcon {
+        display: none;
+    }
+
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .Navbar {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .MenuIcon {
+        display: block;
+    }
+
     .NavbarMenu {
         display: none;
     }
@@ -134,7 +156,7 @@
         align-items: center;
         justify-content: center;
         position: absolute;
-        top: 9rem;
+        top: 5rem;
         left: 0;
         width: 100%;
         padding: 1rem;
@@ -142,54 +164,147 @@
         z-index: 100;
         transition: all 0.3s ease-in-out;
     }
+
+    .SearchBar {
+        width: 50% !important;
+    }
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (max-width: 600px) {
+    .Navbar {
+        width: 100%;
+        height: 7rem;
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        grid-template: 30% auto 30% !important;
+    }
+
     .MenuIcon {
+        display: block;
+    }
+
+    .NavbarMenu {
         display: none;
     }
-}
 
-@media screen and (max-width: 500px) {
-    .Navbar {
-        height: 5rem;
+    .NavbarMenu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 7rem;
+        left: 0;
         width: 100%;
-        border: 3px solid red;
+        padding: 1rem;
+        background-color: rgb(27, 27, 31);
+        z-index: 100;
+        transition: all 0.3s ease-in-out;
     }
 
-    .NavbarContainer {
-        border: 3px solid red;
-        height: 3rem;
+    .SearchBar {
+        width: 40% !important;
+    }
+
+    .NavbarLogo {
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .Navbar {
         width: 100%;
-        padding: .5rem;
+        height: 5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .MenuIcon {
+        display: block;
+    }
+
+    .NavbarMenu {
+        display: none;
+    }
+
+    .NavbarMenu.active {
+        top: 7rem;
+        left: 0;
+        width: 100%;
+    }
+
+    .SearchBar {
+        width: 30% !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 
     .NavbarLogo {
         font-size: 1rem;
-        height: 2rem;
-        width: 2rem;
-        gap: .2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .Navbar {
+        height: 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    .NavbarLogo img {
-        width: 2rem;
-        height: 2rem;
-        gap: .1rem;
+    .MenuIcon {
+        display: block;
+    }
+
+    .NavbarMenu {
+        display: none;
+    }
+
+    .NavbarMenu.active {
+        top: 2.8rem;
+        left: 0;
+        width: 100%;
     }
 
     .SearchBar {
-        height: 2rem;
-        width: 8rem;
+        display: none;
     }
 
-    .SearchBar input {
+    .NavbarLogo {
         font-size: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        align-items: center;
+        gap: .3rem;
     }
 
-    .SearchBar button {
-        font-size: .8rem;
-        height: 1.5rem;
-        width: 3rem;
+    .NavbarLogo img {
+        height: 2rem;
+        width: 2rem;
+        gap: .2rem;
+        padding: 0;
     }
-
 }

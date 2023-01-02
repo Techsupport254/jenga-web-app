@@ -9,25 +9,63 @@
   --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
   --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
   --activeItem: #f799a354;
+  --bg-color: hsl(240, 3%, 15%);
+  --bg-color-clear: hsla(240, 3%, 15%, 0.749);
+  --text-color: hsl(0, 0%, 100%);
+  --accent-color: hsl(39, 48%, 57%);
+  --font-family: 'Raleway', sans-serif;
+  --border-radius: 0.5rem;
+  --bg-color: hsl(240, 3%, 15%);
+  --bg-color-clear: hsla(240, 3%, 15%, 0.749);
+  --text-color: hsl(0, 0%, 100%);
+  --accent-color: hsl(39, 48%, 57%);
+  --font-family: 'Raleway', sans-serif;
+  --border-radius: 0.5rem;
 }
 
 .App {
-  /* padding: 0.5rem 3.5rem; */
-  color: var(--black);
-  background: linear-gradient(106.37deg,
-      #ffe1bc 29.63%,
-      #ffcfd1 51.55%,
-      #f3c6f1 90.85%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
-.AppGlass {
-  background: var(--glass);
-  border-radius: 2rem;
-  gap: 16px;
-  grid-template-columns: 11rem auto 20rem;
-  overflow: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text-color);
+  font-family: var(--font-family);
+  background: rgb(16, 36, 42);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid var(--accent-color);
+}
+
+/* media queries */
+@media screen and (max-width: 768px) {
+  .App {
+    overflow: hidden;
+  }
 }

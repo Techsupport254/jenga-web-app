@@ -1,7 +1,111 @@
-.Contacts{
+.Contacts {
+    margin: 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 3px solid green;
-    height: 50rem;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-color);
+}
+
+.ContactsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: var(--font-family);
+}
+
+.ContactsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 98%;
+    width: 98%;
+}
+
+.ContactCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60rem !important;
+    height: 80%;
+    background: var(--bg-color-clear);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all .5s ease-in-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    gap: 2rem;
+}
+
+form input {
+    width: 90%;
+    height: 2rem;
+    border: 1px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: var(--text-color);
+    background: var(--glass);
+    transition: all .5s ease-in-out;
+}
+
+form input:last-child {
+    width: 50%;
+    height: 3rem;
+    border: 1px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: var(--text-color);
+    background: var(--bg-color);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    background: var(--accent-color);
+}
+
+form input:focus {
+    outline: top;
+    outline-color: var(--accent-color);
+    outline-width: 3px;
+    outline-style: solid;
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+form textarea {
+    width: 90%;
+    height: 10rem;
+    border: 1px solid var(--glass);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: var(--text-color);
+    background: var(--bg-color);
+    transition: all .5s ease-in-out;
 }

@@ -3,7 +3,6 @@ import "./Footer.css";
 
 
 const Footer = () => {
-  // back to top button with smooth scroll behaviour
   const backToTop = () => {
     window.scroll({
       top: 0,
@@ -11,16 +10,26 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
+//show back to top when scroll is started
+  window.onscroll = function () {
+    scrollFunction();
+  };
 
-  // display back top button when scroll is a quater
-  window.onscroll = () => {
-    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-      document.querySelector(".BackToTop").style.display = "flex";
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      document.querySelector(".BackToTop").style.display = "block";
     } else {
       document.querySelector(".BackToTop").style.display = "none";
     }
-  };
+  }
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Message sent successfully");
+  };
 
   return (
     <div className="Footer">
@@ -53,15 +62,18 @@ const Footer = () => {
               name="subject"
               placeholder="Write your message"
             ></textarea>
-            <button className="Submit">
+            <button className="Submit"
+              type="submit"
+              value="Submit"
+              onClick={handleSubmit}
+            >
               <span>Submit</span>
               <i className="fas fa-paper-plane"></i>
             </button>
           </form>
         </div>
         <div className="SocialMedia">
-          <h3>Follow us on:</h3>
-          <div className="logo"><span>Jenga</span></div>
+          <h3 className="heading">Follow us on:</h3>
           <div className="SocialIcons">
             <a href="https://www.facebook.com/">
               <i className="fab fa-facebook-f"></i>

@@ -108,11 +108,12 @@
     left: 0;
     z-index: 100;
     backdrop-filter: blur(2px);
+    overflow: -moz-hidden-unscrollable;
 }
 
 .ModalContainer {
     position: fixed;
-    top: 10%;
+    top: 20%;
     left: 10%;
     z-index: 1;
     width: 75%;
@@ -126,6 +127,79 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+}
+
+.ModalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.ModalHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+}
+
+.ModalHeader span {
+    color: var(--accent-color);
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 1.5rem;
+    /* display at the top right of the page */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.ModalBody {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+    gap: 1rem;
+}
+
+.Right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    border-right: 3px solid var(--accent-color);
+    gap: 1rem;
+}
+
+.Right img {
+    top: 0;
+    left: 0;
+    width: 30rem;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.Left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
 }
 
 /* media queries */

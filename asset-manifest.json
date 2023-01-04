@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/jenga-web-app/static/css/main.ea224f2f.css",
+    "main.js": "/jenga-web-app/static/js/main.227724bd.js",
+    "static/media/bg4.jpg": "/jenga-web-app/static/media/bg4.6a80d04a0ee2c10da8ac.jpg",
+    "static/media/banner.jpg": "/jenga-web-app/static/media/banner.82187413fa3e90d52c86.jpg",
+    "static/media/hilma-marie.jpg": "/jenga-web-app/static/media/hilma-marie.b8fd3a7ba8b3751c22c3.jpg",
+    "static/media/gallery1.jpg": "/jenga-web-app/static/media/gallery1.65e2fbedefa5709e7357.jpg",
+    "static/media/card3.jpg": "/jenga-web-app/static/media/card3.9dd3b3047ba016c0f378.jpg",
+    "static/media/card1.jpg": "/jenga-web-app/static/media/card1.578ad255255911aad170.jpg",
+    "static/media/mike-tev.jpeg": "/jenga-web-app/static/media/mike-tev.2493360ed74267dedd02.jpeg",
+    "static/media/card2.jpg": "/jenga-web-app/static/media/card2.e29e6a51d58a87632a01.jpg",
+    "static/media/victor-quaint.jpeg": "/jenga-web-app/static/media/victor-quaint.9fe47845b1307953b478.jpeg",
+    "index.html": "/jenga-web-app/index.html",
+    "main.ea224f2f.css.map": "/jenga-web-app/static/css/main.ea224f2f.css.map",
+    "main.227724bd.js.map": "/jenga-web-app/static/js/main.227724bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea224f2f.css",
+    "static/js/main.227724bd.js"
+  ]
+}

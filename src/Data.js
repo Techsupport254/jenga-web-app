@@ -79,7 +79,6 @@ export const ServicesData = [
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
 	},
 ];
-
 // ProjectsData
 export const ProjectsData = [
 	{
@@ -94,7 +93,6 @@ export const ProjectsData = [
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
 		image: card1,
 		materials: "",
-
 	},
 	{
 		id: 2,
@@ -127,7 +125,7 @@ export const ProjectsData = [
 		title: "Project 4",
 		location: "Kilimani",
 		budget: 1000000,
-		status:"In Progress",
+		status: "In Progress",
 		time: "",
 		category: "Mansions",
 		description:
@@ -153,7 +151,7 @@ export const ProjectsData = [
 		title: "Project 6",
 		location: "Lavington",
 		budget: 200000,
-		status: "Not Started",
+		status: "Completed",
 		time: "",
 		category: "Mansions",
 		description:

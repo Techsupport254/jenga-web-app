@@ -9,6 +9,7 @@ const Navbar = () => {
 	const handleClick = () => setClick(!Click);
 	const closeMobileMenu = () => setClick(false);
 
+	
 	// searchbar
 	const [search, setSearch] = useState("");
 
@@ -18,7 +19,7 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className="Navbar">
+			<nav className="Navbar" id="Navbar">
 				<div className="NavbarContainer">
 					<Link to="/" className="NavbarLogo">
 						<img src={Logo} alt="Logo" />
@@ -61,7 +62,6 @@ const Navbar = () => {
 									onClick={() => {
 										closeMobileMenu();
 										ScrollToClass();
-                                        
 									}}
 								>
 									<Link to={item.link} className="NavLinks" />

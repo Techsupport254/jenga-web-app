@@ -4,21 +4,20 @@ import "./Projects.css";
 
 const Projects = () => {
 	const [showModal, setShowModal] = useState(false);
-	const [selectedProject, setSelectedProject] = useState(null);
+	// clicked project
+	const [selectedProject, setSelectedProject] = useState({});
 
-	const handleShowModal = (projectId) => {
+	const handleShowModal = (id) => {
 		setShowModal(true);
 
-		//only display data of selected id
-		const selectedProject = ProjectsData.find((project) => project.id === projectId);
-		setSelectedProject(selectedProject);
+		const project = ProjectsData.find((project) => project.id === id);
+		setSelectedProject(project);
 	};
 
 	const handleCloseModal = () => {
 		setShowModal(false);
 	};
 
-	// change colors of different status
 	const statusColor = (status) => {
 		if (status === "Completed") {
 			return "green";
@@ -52,6 +51,24 @@ const Projects = () => {
 							</button>
 							{showModal && selectedProject && (
 								<div className="Modal" key={project.id}>
+									<div className="NextPrev">
+										<button
+											className="Prev"
+											onClick={() => {
+												handleShowModal(project.id - 1);
+											}}
+										>
+											<i className="fas fa-chevron-left"></i>
+										</button>
+										<button
+											className="Next"
+											onClick={() => {
+												handleShowModal(project.id + 1);
+											}}
+										>
+											<i className="fas fa-chevron-right"></i>
+										</button>
+									</div>
 									<div className="ModalContainer">
 										<div className="ModalHeader">
 											<h3 className="heading">{project.title}</h3>

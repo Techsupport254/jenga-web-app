@@ -27,16 +27,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: .5rem;
     width: 30rem !important;
-    background: var(--bg-color);
+    background: var(--bg-color-clear);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    box-shadow: 0 0 5px rgb(240, 236, 236);
     transition: all .5s ease-in-out;
 }
 
 .TestimonialCard img {
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
     object-fit: cover;
     border-radius: 50%;
     padding: 1rem;
@@ -63,4 +65,114 @@
     font-family: var(--font-family);
     font-weight: bolder;
     font-size: 1.3rem;
+}
+
+.TestimonialCard p {
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.SaySomething {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    background: var(--bg-color-clear);
+    border-radius: var(--border-radius);
+}
+
+.TestimonialButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.TestimonialButtons button {
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background: var(--accent-color);
+    color: var(--bg-color);
+    font-family: var(--font-family);
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+    -ms-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+}
+
+.TestimonialButtons button:nth-child(1) {
+    background: var(--bg-color-success);
+    color: var(--black);
+}
+
+.TestimonialButtons button:hover {
+    background: var(--bg-color);
+    color: var(--accent-color);
+}
+
+.Modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    background: var(--bg-color-clear);
+    border-radius: var(--border-radius);
+}
+
+.ModalContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    padding: 1rem;
+    gap: 1rem;
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+}
+
+.ModalHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent-color);
+}
+
+.ModalHeader h3 {
+    font-family: var(--font-family);
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.ModalBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+}
+
+
+.ModalBody .Comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 4rem;
+    width: 90%;
+    animation: send 1s linear;
 }

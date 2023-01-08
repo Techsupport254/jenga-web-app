@@ -13,7 +13,7 @@ const App = () => {
 	return (
 		<React.Fragment>
 			<Router>
-				<div className="App">
+				<div className="App Animated">
 					<div className="AppGlass">
 						<Navbar />
 						<Home />

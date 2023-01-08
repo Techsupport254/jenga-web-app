@@ -2,22 +2,29 @@ import React, { useState } from "react";
 import { ProjectsData } from "../../Data";
 import "./Projects.css";
 
-const Projects = () => {
-	const [showModal, setShowModal] = useState(false);
-	// clicked project
-	const [selectedProject, setSelectedProject] = useState({});
+const Projects = ({ id }) => {
+	// Declare state variables to store the data for the modal and whether the modal is open
+	const [modalData, setModalData] = useState({});
+	const [modalOpen, setModalOpen] = useState(false);
 
-	const handleShowModal = (id) => {
-		setShowModal(true);
-
+	// Retrieve the data for the project with the specified ID from the ProjectsData component
+	const getProjectData = (id) => {
 		const project = ProjectsData.find((project) => project.id === id);
-		setSelectedProject(project);
+		return project;
 	};
 
-	const handleCloseModal = () => {
-		setShowModal(false);
+	// Open the modal and set the modal data to the data for the project with the specified ID
+	const openModal = (id) => {
+		setModalData(getProjectData(id));
+		setModalOpen(true);
 	};
 
+	// Close the modal
+	const closeModal = () => {
+		setModalOpen(false);
+	};
+
+	// change color of status
 	const statusColor = (status) => {
 		if (status === "Completed") {
 			return "green";
@@ -27,77 +34,55 @@ const Projects = () => {
 			return "red";
 		}
 	};
+	
 
+	// Return the JSX for the Projects component
 	return (
 		<div className="Projects">
-			<h3 className="heading">Recent Projects</h3>
+			<h3 className="heading">** Recent Projects **</h3>
 			<div className="ProjectsContainer">
 				{ProjectsData.map((project) => (
 					<div className="ProjectCard" key={project.id}>
-						<div className="ProjectImage">
-							<img src={project.image} alt={project.title} />
-						</div>
+						<img src={project.image} alt={project.title} />
 						<div className="ProjectInfo">
 							<h3>{project.title}</h3>
 							<p>{project.description}</p>
 							<button
 								className="MoreItems"
-								onClick={() => {
-									handleShowModal(project.id);
-								}}
+								onClick={() => openModal(project.id)}
 							>
 								More
-								<i className="fas fa-external-link-alt"></i>
 							</button>
-							{showModal && selectedProject && (
-								<div className="Modal" key={project.id}>
+							{modalOpen && (
+								<div className="Modal" key={id}>
 									<div className="NextPrev">
 										<button
-											className="Prev"
-											onClick={() => {
-												handleShowModal(project.id - 1);
-											}}
+											onClick={() => openModal(project.id - 1)}
 										>
-											<i className="fas fa-chevron-left"></i>
+											<i className="fas fa-arrow-left"></i>
 										</button>
 										<button
-											className="Next"
-											onClick={() => {
-												handleShowModal(project.id + 1);
-											}}
+											onClick={() => openModal(project.id + 1)}
 										>
-											<i className="fas fa-chevron-right"></i>
+											<i className="fas fa-arrow-right"></i>
 										</button>
 									</div>
 									<div className="ModalContainer">
-										<div className="ModalHeader">
-											<h3 className="heading">{project.title}</h3>
-											<div className="CloseModal">
-												<i
-													className="fas fa-times"
-													onClick={handleCloseModal}
-												></i>
-											</div>
+										<div className="CloseModal" onClick={() => closeModal()}>
+											<i className="fas fa-times"></i>
 										</div>
+										<h3 className="heading">{modalData.title}</h3>
 										<div className="ModalBody">
 											<div className="Right">
-												<img src={project.image} alt={project.title} />
-												<span>Location: {project.location}</span>
+												<img src={modalData.image} alt={modalData.title} />
 												<span
-													style={{
-														color: statusColor(project.status),
-													}}
-												>
-													{project.status}
-												</span>
-												<span>Estimate Budget: $ {project.budget}</span>
-												<span>Estimate Time: {project.time}</span>
-												<span>Category: {project.category}</span>
-												<span>Technologies: {project.technologies}</span>
+													className="status"
+													style={{ color: statusColor(modalData.status) }}
+												>{modalData.status}</span>
+												<span>Location: {modalData.location}</span>
+												<span>Duration: {modalData.time}</span>
 											</div>
-											<div className="Left">
-												<p>{project.description}</p>
-											</div>
+											<div className="Left"><p>{modalData.description}</p></div>
 										</div>
 									</div>
 								</div>

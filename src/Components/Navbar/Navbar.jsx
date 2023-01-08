@@ -8,8 +8,6 @@ const Navbar = () => {
 	const [Click, setClick] = useState(false);
 	const handleClick = () => setClick(!Click);
 	const closeMobileMenu = () => setClick(false);
-
-	
 	// searchbar
 	const [search, setSearch] = useState("");
 

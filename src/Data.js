@@ -99,7 +99,7 @@ export const ProjectsData = [
 		title: "Project 2",
 		location: "Kileleshwa",
 		budget: 500000,
-		status: "Completed",
+		status: "In Progress",
 		time: "",
 		category: "Mansions",
 		description:
@@ -112,7 +112,7 @@ export const ProjectsData = [
 		title: "Project 3",
 		location: "Lavington",
 		budget: 200000,
-		status: "Completed",
+		status: "Not Started",
 		time: "",
 		category: "Mansions",
 		description:
@@ -125,7 +125,7 @@ export const ProjectsData = [
 		title: "Project 4",
 		location: "Kilimani",
 		budget: 1000000,
-		status: "In Progress",
+		status: "Completed",
 		time: "",
 		category: "Mansions",
 		description:
@@ -138,7 +138,7 @@ export const ProjectsData = [
 		title: "Project 5",
 		location: "Kileleshwa",
 		budget: 500000,
-		status: "Not Started",
+		status: "In Progress",
 		time: "",
 		category: "Mansions",
 		description:
@@ -151,7 +151,7 @@ export const ProjectsData = [
 		title: "Project 6",
 		location: "Lavington",
 		budget: 200000,
-		status: "Completed",
+		status: "Not Started",
 		time: "",
 		category: "Mansions",
 		description:

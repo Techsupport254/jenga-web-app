@@ -32,12 +32,13 @@ const Footer = () => {
   };
 
   return (
-    <div className="Footer">
+    <div className="Footer Animated">
       <div className="FooterContainer">
         <div className="Contacts">
           <h3 className="heading">Contacts</h3>
           <div className="ContactsContainer">
             <div className="Contact"><i className="fas fa-phone"></i> +254796851114</div>
+            <div className="Contact"><i className="fab fa-whatsapp"></i> +254796851114</div>
             <div className="Contact"><i className="fas fa-envelope"></i>kiruivictor097@gmail.com</div>
             <div className="Contact"><i className="fas fa-map-marker-alt"></i> Nairobi, Kenya</div>
           </div>
@@ -49,18 +50,18 @@ const Footer = () => {
               type="text"
               id="name"
               name="name"
-              placeholder="Your name.."
+              placeholder="Name"
             ></input>
             <input
               type="text"
               id="email"
               name="email"
-              placeholder="Your email.."
+              placeholder="Email"
             ></input>
             <textarea
               id="subject"
               name="subject"
-              placeholder="Write your message"
+              placeholder="Message"
             ></textarea>
             <button className="Submit"
               type="submit"

@@ -4,7 +4,7 @@ import { ServicesData } from "../../Data";
 
 const CardItems = () => {
 	return (
-		<div className="Services">
+		<div className="Services Animated">
 			<h3 className="heading">** Our Services **</h3>
 			<div className="ServicesContainer">
 				<div className="ServicesWrapper">

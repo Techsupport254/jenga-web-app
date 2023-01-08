@@ -10,6 +10,8 @@
   --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
   --activeItem: #f799a354;
   --bg-color: hsl(240, 3%, 15%);
+  --bg-color-danger: hsl(0, 48%, 47%);
+  --bg-color-success: hsl(112, 34%, 46%);
   --bg-color-clear: hsla(240, 3%, 15%, 0.749);
   --text-color: hsl(0, 0%, 100%);
   --accent-color: hsl(39, 48%, 57%);
@@ -55,6 +57,11 @@ button {
 }
 
 .heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   font-size: 2rem;
   font-weight: bolder;
   color: var(--accent-color);
@@ -64,19 +71,58 @@ button {
 }
 
 .Animated {
-  /* drop page down when the page is scrolled */
   animation: drop 0.5s ease-in-out;
 }
 
 @keyframes drop {
   0% {
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translateY(-10px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+input {
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-weight: bolder;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+input::placeholder {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+textarea {
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-weight: bolder;
+  font-size: 1.2rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+textarea::placeholder {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+
+.fas,
+.fab {
+  cursor: pointer;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 /* media queries */

@@ -5,12 +5,21 @@
     align-items: center;
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(87, 85, 85);
-    padding: 1rem;
-    margin: 1rem;
     background: url(../../Assets/IMGS/bg4.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.AboutContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    backdrop-filter: blur(3px);
 }
 
 .History {
@@ -60,6 +69,8 @@
     border-radius: 10px;
     padding: 1rem;
     background: rgb(68, 66, 66);
+    box-shadow: 0 0 10px rgb(218, 215, 215);
+
 }
 
 .AboutContent h5 {

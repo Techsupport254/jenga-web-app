@@ -32,7 +32,6 @@ const Projects = ({ id }) => {
 
 		// get maximum and minimum length
 		const max = ProjectsData.length;
-		const min = 1;
 
 		if (nextId > max) {
 			setModalData(getProjectData(1));

@@ -8,13 +8,6 @@ const Navbar = () => {
 	const [Click, setClick] = useState(false);
 	const handleClick = () => setClick(!Click);
 	const closeMobileMenu = () => setClick(false);
-	// searchbar
-	const [search, setSearch] = useState("");
-
-	// search by class or project name or description
-	const handleSearch = () => {
-		
-	}
 
 	return (
 		<>
@@ -28,8 +21,6 @@ const Navbar = () => {
 						<input
 							type="text"
 							placeholder="Search"
-							value={search}
-							onChange={handleSearch}
 						/>
 						<i
 							className="fas fa-search"

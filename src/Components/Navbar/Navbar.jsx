@@ -11,9 +11,10 @@ const Navbar = () => {
 	// searchbar
 	const [search, setSearch] = useState("");
 
-	const handleSearch = (e) => {
-		setSearch(e.target.value);
-	};
+	// search by class or project name or description
+	const handleSearch = () => {
+		
+	}
 
 	return (
 		<>

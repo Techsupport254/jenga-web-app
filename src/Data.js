@@ -92,7 +92,20 @@ export const ProjectsData = [
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
 		image: card1,
-		materials: "",
+		materials: {
+			roofing: "Tiles",
+			flooring: "Tiles",
+			walls: "Bricks",
+			floor: "Tiles",
+			ceiling: "Tiles",
+			doors: "Wooden and reinforced with steel",
+			windows: "steel",
+			plumbing: "",
+			electrical: "",
+			appliances: "",
+			other: "",
+		},
+		about: "lorem",
 	},
 	{
 		id: 2,
@@ -157,6 +170,19 @@ export const ProjectsData = [
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
 		image: card3,
+		materials: "",
+	},
+	{
+		id: 7,
+		title: "Project 7",
+		location: "Kilimani",
+		budget: 1000000,
+		status: "Completed",
+		time: "",
+		category: "Mansions",
+		description:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+		image: card1,
 		materials: "",
 	},
 ];

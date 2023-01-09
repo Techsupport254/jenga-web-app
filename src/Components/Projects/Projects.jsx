@@ -34,7 +34,9 @@ const Projects = ({ id }) => {
 			return "red";
 		}
 	};
-	
+
+	// next and previous buttons
+
 
 	// Return the JSX for the Projects component
 	return (
@@ -55,34 +57,28 @@ const Projects = ({ id }) => {
 							</button>
 							{modalOpen && (
 								<div className="Modal" key={id}>
-									<div className="NextPrev">
-										<button
-											onClick={() => openModal(project.id - 1)}
-										>
-											<i className="fas fa-arrow-left"></i>
-										</button>
-										<button
-											onClick={() => openModal(project.id + 1)}
-										>
-											<i className="fas fa-arrow-right"></i>
-										</button>
-									</div>
+								<div className="NextPrev">
+									
+								</div>
 									<div className="ModalContainer">
 										<div className="CloseModal" onClick={() => closeModal()}>
 											<i className="fas fa-times"></i>
 										</div>
 										<h3 className="heading">{modalData.title}</h3>
 										<div className="ModalBody">
-											<div className="Right">
+											<div className="Left">
 												<img src={modalData.image} alt={modalData.title} />
 												<span
 													className="status"
 													style={{ color: statusColor(modalData.status) }}
 												>{modalData.status}</span>
 												<span>Location: {modalData.location}</span>
+												<span>Budget: $ {modalData.budget}</span>
 												<span>Duration: {modalData.time}</span>
 											</div>
-											<div className="Left"><p>{modalData.description}</p></div>
+											<div className="Right">
+												<p>{modalData.description}</p>
+											</div>
 										</div>
 									</div>
 								</div>
